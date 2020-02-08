@@ -1,0 +1,24 @@
+#spring:
+#  application:
+#    name: ycode-web-user-regist
+#  cloud:
+#    nacos:
+#      discovery:
+#        server-addr: 192.168.31.13:8848 # 服务注册与发现 地址
+#    sentinel:
+#      transport:
+#        port: 44000
+#        dashboard: 192.168.31.13:8080
+#
+#server:
+#  port: 43000
+#
+#feign:
+#  sentinel:
+#    enabled: true
+#
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: "*"

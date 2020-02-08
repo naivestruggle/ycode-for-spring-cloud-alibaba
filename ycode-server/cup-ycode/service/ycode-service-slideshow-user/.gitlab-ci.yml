@@ -1,0 +1,30 @@
+stages:
+  - package
+  - push
+  - run
+  - clean
+
+package:
+  stage: package
+  script:
+    - /usr/local/maven/apache-maven-3.6.3/bin/mvn clean package
+    - cp target/ycode-service-slideshow-user-1.0.0-SNAPSHOT.jar docker
+    - cd docker
+    - docker build -t 192.168.31.10:5000/ycode-service-slideshow-user .
+
+push:
+  stage: push
+  script:
+    - docker push 192.168.31.10:5000/ycode-service-slideshow-user
+
+run:
+  stage: run
+  script:
+    - cd docker
+    - docker-compose down
+    - docker-compose up -d
+
+clean:
+  stage: clean
+  script:
+    - docker image prune -f

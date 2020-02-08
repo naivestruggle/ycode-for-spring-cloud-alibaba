@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.cup</groupId>
+        <version>1.0.0-SNAPSHOT</version>
+        <artifactId>ycode-dependencies</artifactId>
+        <relativePath>../../ycode-dependencies/pom.xml</relativePath>
+    </parent>
+
+    <artifactId>ycode-commons-mapper</artifactId>
+    <packaging>jar</packaging>
+
+    <name>${project.artifactId}</name>
+    <url>http://www.ycode9.com</url>
+    <inceptionYear>2020</inceptionYear>
+
+    <dependencies>
+        <!-- @Begin Spring Boot >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
+        <dependency> <!-- 数据库连接池 -->
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-starter</artifactId>
+        </dependency>
+        <dependency> <!-- 简化 mybatis 开发 -->
+            <groupId>tk.mybatis</groupId>
+            <artifactId>mapper-spring-boot-starter</artifactId>
+        </dependency>
+        <dependency> <!-- 分页 -->
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper-spring-boot-starter</artifactId>
+        </dependency>
+        <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< @End -->
+
+        <!-- @Begin 工具 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
+        <dependency> <!-- mysql 数据库驱动 -->
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+        <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< @End -->
+
+        <!-- @Begin 自定义项目 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
+        <dependency>
+            <groupId>com.cup</groupId>
+            <artifactId>ycode-commons-domain</artifactId>
+        </dependency>
+        <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< @End -->
+
+    </dependencies>
+</project>

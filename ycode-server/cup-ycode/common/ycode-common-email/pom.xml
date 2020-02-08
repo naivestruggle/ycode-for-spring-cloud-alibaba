@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.cup</groupId>
+        <version>1.0.0-SNAPSHOT</version>
+        <artifactId>ycode-dependencies</artifactId>
+        <relativePath>../../ycode-dependencies/pom.xml</relativePath>
+    </parent>
+
+    <artifactId>ycode-common-email</artifactId>
+    <packaging>jar</packaging>
+
+    <name>${project.artifactId}</name>
+    <url>http://www.ycode9.com</url>
+    <inceptionYear>2020</inceptionYear>
+
+    <dependencies>
+        <!-- @Begin 自定义项目 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
+        <dependency> <!-- 工具 -->
+            <groupId>com.cup</groupId>
+            <artifactId>ycode-commons</artifactId>
+        </dependency>
+        <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< @End -->
+
+
+        <!-- @Begin Spring Boot >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
+        <dependency> <!-- Spring Boot 的健康检查 -->
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        <dependency> <!-- Spring Boot 整合 mail -->
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-mail</artifactId>
+        </dependency>
+        <dependency> <!-- Spring Boot 整和 SpringMVC -->
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< @End -->
+
+        <!-- @Begin Spring Cloud Starter Alibaba >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
+        <dependency> <!-- 分布式配置 -->
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+        </dependency>
+        <dependency> <!-- 服务注册与发现 -->
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
+        <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< @End -->
+
+        <!-- @Begin Spring Cloud Starter >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
+        <dependency> <!-- RocketMQ 异步通信 -->
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-stream-rocketmq</artifactId>
+        </dependency>
+        <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< @End -->
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>com.cup.ycode.common.email.YcodeCommonEmailApplication</mainClass>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

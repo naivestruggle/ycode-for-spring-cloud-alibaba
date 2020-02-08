@@ -1,0 +1,15 @@
+version: '3.1'
+services:
+  ycode-service-user-regist:
+    restart: always
+    image: 192.168.31.10:5000/ycode-service-user-regist
+    container_name: ycode-service-user-regist
+    hostname: ycode-service-user-regist
+    ports:
+      - 42000:42000  # 外部访问端口  RESTFul端口
+
+# 使用同一个已存在的网络  保证服务之间可以相互通信
+networks:
+  default:
+    external:
+      name: ycode

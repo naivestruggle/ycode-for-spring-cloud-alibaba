@@ -1,0 +1,43 @@
+spring:
+  cloud:
+    stream:
+      rocketmq:
+        binder:
+          namesrv-addr: 192.168.31.14:9876
+        bindings:
+          send_email_input: {consumer.orderly: true}
+          send_email_verify_code_input: {consumer.orderly: true}
+      bindings:
+        send_email_input: {destination: ycode-email, content-type: application/json, group: ycode-email, consumer.maxAttempts: 1}
+        send_email_verify_code_input: {destination: send_email_verify_code, content-type: application/json, group: ycode-email, consumer.maxAttempts: 1}
+
+
+#spring:
+#  application:
+#    name: ycode-common-email
+#  mail:
+#    host: smtp.163.com
+#    # 发送邮件的邮箱地址
+#    username: naivestruggle@163.com
+#    # 你的邮箱授权码
+#    password: QQ981214
+#    properties:
+#      mail:
+#        smtp:
+#          auth: true
+#          starttls:
+#            enable: true
+#            required: true
+#  cloud:
+#    nacos:
+#      discovery:
+#        server-addr: 192.168.31.13:8848
+#
+#server:
+#  port: 41001
+#
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: "*"

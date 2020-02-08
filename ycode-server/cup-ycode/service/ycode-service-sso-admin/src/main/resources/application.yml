@@ -1,0 +1,30 @@
+#spring:
+#  application:
+#    name: ycode-service-sso-admin
+#  datasource:
+#    druid:
+#      url: jdbc:mysql://192.168.31.10:3306/ycode_admin?useUnicode=true&characterEncoding=utf-8&useSSL=false
+#      username: root
+#      password: yxh_root
+#      initial-size: 1
+#      min-idle: 1
+#      max-active: 20
+#      test-on-borrow: true
+#      driver-class-name: com.mysql.cj.jdbc.Driver
+#  cloud:
+#    nacos:
+#      discovery:
+#        server-addr: 192.168.31.13:8848
+#
+#server:
+#  port: 42003
+#
+#mybatis:
+#  type-aliases-package: com.cup.ycode.commons.domain
+#  mapper-locations: classpath:mapper/*.xml
+#
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: "*"

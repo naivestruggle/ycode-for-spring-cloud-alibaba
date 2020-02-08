@@ -1,0 +1,15 @@
+version: '3.1'
+services:
+  ycode-web-sso-admin:
+    restart: always
+    image: 192.168.31.10:5000/ycode-web-sso-admin
+    container_name: ycode-web-sso-admin
+    hostname: ycode-web-sso-admin
+    ports:
+      - 43003:43003  # 外部访问端口  RESTFul端口
+      - 44003:44003  # Sentinel 熔断器 仪表盘 接收端口
+# 使用同一个已存在的网络  保证服务之间可以相互通信
+networks:
+  default:
+    external:
+      name: ycode

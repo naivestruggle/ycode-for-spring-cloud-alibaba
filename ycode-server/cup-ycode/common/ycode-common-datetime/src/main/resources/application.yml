@@ -1,0 +1,15 @@
+#spring:
+#  application:
+#    name: ycode-common-datetime
+#  cloud:
+#    nacos:
+#      discovery:
+#        server-addr: 192.168.31.13:8848
+#server:
+#  port: 41004
+#
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: "*"

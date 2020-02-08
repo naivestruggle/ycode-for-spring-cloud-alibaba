@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.cup</groupId>
+        <version>1.0.0-SNAPSHOT</version>
+        <artifactId>ycode-dependencies</artifactId>
+        <relativePath>../../ycode-dependencies/pom.xml</relativePath>
+    </parent>
+
+    <artifactId>ycode-api-slideshow-admin</artifactId>
+    <packaging>jar</packaging>
+
+    <name>${project.artifactId}</name>
+    <url>http://www.ycode9.com</url>
+    <inceptionYear>2020</inceptionYear>
+
+    <dependencies>
+        <!-- @Begin 自定义 项目 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
+        <dependency>
+            <groupId>com.cup</groupId>
+            <artifactId>ycode-commons</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.cup</groupId>
+            <artifactId>ycode-commons-domain</artifactId>
+        </dependency>
+        <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< @End -->
+
+        <!-- @Begin Spring Cloud Starter >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
+        <dependency> <!-- Http 请求 -->
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
+        <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< @End -->
+    </dependencies>
+</project>

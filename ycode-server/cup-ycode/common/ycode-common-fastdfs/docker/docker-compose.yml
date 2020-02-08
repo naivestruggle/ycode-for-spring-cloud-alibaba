@@ -1,0 +1,15 @@
+version: '3.1'
+services:
+  ycode-common-fastdfs:
+    restart: always
+    image: 192.168.31.10:5000/ycode-common-fastdfs
+    container_name: ycode-common-fastdfs
+    hostname: ycode-common-fastdfs
+    ports:
+      - 41003:41003  # 外部访问端口  RESTFul端口
+
+# 使用同一个已存在的网络  保证服务之间可以相互通信
+networks:
+  default:
+    external:
+      name: ycode

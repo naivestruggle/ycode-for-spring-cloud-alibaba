@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.cup</groupId>
+        <version>1.0.0-SNAPSHOT</version>
+        <artifactId>ycode-dependencies</artifactId>
+        <relativePath>../../ycode-dependencies/pom.xml</relativePath>
+    </parent>
+
+    <artifactId>ycode-commons</artifactId>
+    <packaging>jar</packaging>
+
+    <name>${project.artifactId}</name>
+    <url>http://www.ycode9.com</url>
+    <inceptionYear>2020</inceptionYear>
+
+    <dependencies>
+        <!-- @Begin tomcat >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
+        <dependency> <!-- tomcat 的 API -->
+            <groupId>org.apache.tomcat.embed</groupId>
+            <artifactId>tomcat-embed-core</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< @End -->
+
+
+        <!-- @Begin 工具 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
+        <dependency> <!-- 生成getter setter等的插件依赖 -->
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+        <dependency>  <!-- 处理json -->
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+        </dependency>
+        <dependency> <!-- 集合工具  是 Spring Boot 依赖的 -->
+            <groupId>com.github.ben-manes.caffeine</groupId>
+            <artifactId>guava</artifactId>
+        </dependency>
+        <dependency> <!-- 使用这里面的 StringUtils -->
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate.javax.persistence</groupId>
+            <artifactId>hibernate-jpa-2.1-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< @End -->
+
+        <!-- @Begin Spring >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< @End -->
+
+
+    </dependencies>
+</project>

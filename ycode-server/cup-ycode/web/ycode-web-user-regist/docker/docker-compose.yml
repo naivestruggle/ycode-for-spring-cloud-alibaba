@@ -1,0 +1,15 @@
+version: '3.1'
+services:
+  ycode-web-user-regist:
+    restart: always
+    image: 192.168.31.10:5000/ycode-web-user-regist
+    container_name: ycode-web-user-regist
+    hostname: ycode-web-user-regist
+    ports:
+      - 43000:43000  # 外部访问端口  RESTFul端口
+      - 44000:44000  # Sentinel 熔断器 仪表盘 接收端口
+# 使用同一个已存在的网络  保证服务之间可以相互通信
+networks:
+  default:
+    external:
+      name: ycode
