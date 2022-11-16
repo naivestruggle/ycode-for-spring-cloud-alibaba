@@ -40,7 +40,7 @@
         <!-- @Begin 工具 依赖 版本管理 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
         <lombok.version>1.18.10</lombok.version>
         <!--处理json-->
-        <jackson-databind.version>2.9.6</jackson-databind.version>
+        <jackson-databind.version>2.12.7.1</jackson-databind.version>
         <mysql.version>8.0.13</mysql.version>
         <!-- Swagger 生成接口文档 -->
         <swagger2.version>2.9.2</swagger2.version>
